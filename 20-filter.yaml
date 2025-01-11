@@ -8,7 +8,7 @@
 
 
   - name: convert string to list
-  vars:
-    fruits: "banana, orange, apple"
+    vars:
+      fruits: "banana, orange, apple"
     ansible.builtin.debug:
       msg: "fruits are: {{ fruits | split(',')}}"
