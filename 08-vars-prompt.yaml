@@ -1,5 +1,5 @@
 - name: variables through prompt
-  hosts: ocal
+  hosts: local
   connection: local
   vars_prompt:
   - name: COURSE
