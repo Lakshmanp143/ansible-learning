@@ -11,7 +11,12 @@
     GREET: play
   tasks:
   - name: print greet information
-    vars:
-      GREET: task
+    # vars:
+    #   GREET: task
     ansible.builtin.debug:
       msg: "hello from {{ GREET }}"
+
+
+
+#1. from args
+#2. from task
