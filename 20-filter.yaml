@@ -49,7 +49,7 @@
     vars:
       num: [1,2,3,556,567]
     ansible.builtin.debug:
-      msg: "min is {{ num | min }}" "max is {{ num | max }}" "sum is {{ num | sum }}"
+      msg: "min is {{ num | min }}" "max is {{ num | max }}" 
 
 
 
