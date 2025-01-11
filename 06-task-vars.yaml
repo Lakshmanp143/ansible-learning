@@ -1,7 +1,7 @@
 - name: variable
   hosts: local
   connection: local
-  vars:   # play level variables
+  vars:   # play level variables or global variables, accessable for entire play
     COURSE: "Devops with AWS"
     DURATION: 120hrs
     LISTENER: Lakshman
@@ -11,7 +11,7 @@
       msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Listener is {{ LISTENER }}"
 
   - name: print the variables 
-    vars: # task level variables
+    vars: # task level variables or local variables, task level variables can override play level variables, accessable only for task level
       COURSE: Ansible
       DURATION: 100hrs
     ansible.builtin.debug:
