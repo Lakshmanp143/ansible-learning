@@ -20,4 +20,4 @@
         duration: 120hrs
         listener: Lakshman
     ansible.builtin.debug:
-      msg: "Course info is: {{ course | dict2list }}"
+      msg: "Course info is: {{ course | dict2items }}"
