@@ -13,4 +13,11 @@
     ansible.builtin.debug:
       msg: "fruits are: {{ fruits | split(',')}}"
 
-  
+  - name: convert map to list
+    vars:
+      course:
+        name: ansible
+        duration: 120hrs
+        listener: Lakshman
+    ansible.builtin.debug:
+      msg: "Course info is: {{ course | dict2list }}"
