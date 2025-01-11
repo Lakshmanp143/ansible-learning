@@ -3,10 +3,10 @@
   connection: local
   # vars_files:
   # - course.yaml
-  vars_prompt:
-  - name: GREET
-    prompt: please enter greet info
-    private: false
+  # vars_prompt:
+  # - name: GREET
+  #   prompt: please enter greet info
+  #   private: false
   vars:
     GREET: play
   tasks:
@@ -21,3 +21,4 @@
 #1. from args
 #2. from task
 #3. from files
+#4. from promt
