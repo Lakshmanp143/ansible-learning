@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_files:
-  - course.yml
+  - course.yaml
   vars_prompt:
   - name: GREET
     prompt: please enter greet info
