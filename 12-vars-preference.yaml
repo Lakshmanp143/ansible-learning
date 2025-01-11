@@ -1,8 +1,8 @@
 - name: variable preferences
   hosts: local
   connection: local
-  vars_files:
-  - course.yaml
+  # vars_files:
+  # - course.yaml
   vars_prompt:
   - name: GREET
     prompt: please enter greet info
@@ -20,3 +20,4 @@
 
 #1. from args
 #2. from task
+#3. from files
