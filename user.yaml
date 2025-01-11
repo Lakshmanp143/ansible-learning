@@ -1,0 +1,23 @@
+- name: laxman
+  email: lxman@gmail.com
+  addresses: list of addresses
+  - type: permanant
+    door no: 1-75
+    street: "c camp"
+    city: badvel
+  - type: current
+    door no: 407
+    street: narayana reddy layout
+    city: banglore
+
+- name: ram
+  email: ram@gmail.com
+  addresses: list of addresses
+  - type: permanant
+    door no: 1-75
+    street: "c camp"
+    city: badvel
+  - type: current
+    door no: 507
+    street: narayana reddy layout
+    city: banglore
