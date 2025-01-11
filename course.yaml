@@ -1,4 +1,4 @@
 COURSE: "Dveops with AWS"
 DURATION: 120HRS
 LISTENER: LAKSHMAN
-GREET: files
+GREET: "from files"
