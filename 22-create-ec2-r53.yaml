@@ -6,6 +6,7 @@
     instance_type: t3.micro
     image_id: ami-09c813fb71547fc4f 
     security_group: sg-03bf2f0215982b4f0
+    zone: lakshman.site
     instances:
     - mysql
     - backend
@@ -32,10 +33,21 @@
   #   ansible.builtin.debug:
   #     msg: "{{ ec2_info }}"
 
-  - name: print the private addresses
+  - name: print the private_ip_addresses
     ansible.builtin.debug:
-      msg: "{{ item.private_ip_address }}"
+      msg: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
 
+- name: print private ip r53 records
+  amazon.aws.route53:
+    state: present
+    zone: "{{ zone }}"
+    record: "{{ item.item }}.{{ zone }}"
+    type: A
+    ttl: 1
+    value: "{{ item.instanses[0].private_ip_address }}"
+    wait: true
+    overwrite: true
+  loop: "{{ ec2_info.results }}"
 
 
