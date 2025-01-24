@@ -18,4 +18,4 @@
       instance_type: "{{ instance_type }}"
       image_id: "{{ ami-09c813fb71547fc4f }}"
       security_group: "{{ security_group }}"  
-    loop: "{{ instances: }}"
+    loop: "{{ instances }}"
