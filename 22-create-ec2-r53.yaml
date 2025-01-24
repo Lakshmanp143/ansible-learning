@@ -28,6 +28,14 @@
     loop: "{{ instances }}"
     register: ec2_info
 
-  - name: print ec2-info
+  # - name: print ec2-info
+  #   ansible.builtin.debug:
+  #     msg: "{{ ec2_info }}"
+
+  - name: print the private addresses
     ansible.builtin.debug:
-      msg: "{{ ec2_info }}"
+      msg: "{{ item.instances[0].private_ip_address }}"
+    loop: "{{ ec2-info.results }}"
+
+
+
