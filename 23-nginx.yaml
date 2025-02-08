@@ -1,6 +1,6 @@
 - name: configure nginx 
-  #hosts: all
   hosts: web
+  #hosts: web
   become: yes
   #serial: 10
   tasks: 
